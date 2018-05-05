@@ -6,7 +6,6 @@ void main() => runApp(new MyApp());
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    //final wordPair = new WordPair.random(); // Add this line.
     return new MaterialApp(
       //title: 'Welcome to Flutter',
       theme: new ThemeData(
@@ -18,17 +17,16 @@ class MyApp extends StatelessWidget {
 }
 
 class RandomWordsState extends State<RandomWords> {
-  // Add the next two lines.
   final List<WordPair> _suggestions = <WordPair>[];
-  final Set<WordPair> _saved = new Set<WordPair>();   // Add this line.
+  final Set<WordPair> _saved = new Set<WordPair>();
   final TextStyle _biggerFont = const TextStyle(fontSize: 18.0);
 
-  @override                                  // Add from this line ...
+  @override
   Widget build(BuildContext context) {
     //final WordPair wordPair = new WordPair.random();
     //return new Text(wordPair.asPascalCase);
 
-    return new Scaffold (                   // Add from here...
+    return new Scaffold (
       appBar: new AppBar(
         title: new Text('Name Generator'),
         actions: <Widget>[
@@ -37,7 +35,7 @@ class RandomWordsState extends State<RandomWords> {
       ),
       body: _buildSuggestions(),
     );
-  }                                          // ... to this line.
+  }
 
   Widget _buildSuggestions() {
     return new ListView.builder(
@@ -54,7 +52,6 @@ class RandomWordsState extends State<RandomWords> {
           if (i.isOdd) {
             return new Divider();
           }
-
           // The syntax "i ~/ 2" divides i by 2 and returns an
           // integer result.
           // For example: 1, 2, 3, 4, 5 becomes 0, 1, 1, 2, 2.
