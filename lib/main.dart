@@ -7,7 +7,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
-      //title: 'Welcome to Flutter',
       theme: new ThemeData(
         primaryColor: Colors.blueAccent,
       ),
@@ -23,9 +22,6 @@ class RandomWordsState extends State<RandomWords> {
 
   @override
   Widget build(BuildContext context) {
-    //final WordPair wordPair = new WordPair.random();
-    //return new Text(wordPair.asPascalCase);
-
     return new Scaffold (
       appBar: new AppBar(
         title: new Text('Name Generator'),
